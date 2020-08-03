@@ -1,4 +1,4 @@
-export const characters = (state = [], action) => {
+const characters = (state = [], action) => {
   switch (action.type) {
     case 'GET_CHARACTERS':
       return action.payload.characters;
