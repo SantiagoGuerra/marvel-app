@@ -1,6 +1,6 @@
 export const getCharacters = characters => ({
   type: 'GET_CHARACTERS',
-  characters,
+  payload: { characters },
 });
 
 export const get = '';
