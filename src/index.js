@@ -6,6 +6,5 @@ ReactDOM.render(
   <div>
     Development
   </div>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
-
