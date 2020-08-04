@@ -65,7 +65,7 @@ export const getCharacterInfo = id => async dispatch => {
 
       const content = data.results;
 
-      dispatch(setCharacterData(content));
+      dispatch(setCharacterData(content[0]));
     })
 
     .catch(error => {

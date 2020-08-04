@@ -8,20 +8,20 @@ import { getDataForFeed } from '../middlewares';
 function Home() {
 
   const feed = useSelector(state => state.feed);
-  const filter = useSelector(state => state.filter)
+  const filter = useSelector(state => state.filter);
   const currentCategory = useSelector(state => state.filter.currentCategory);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getDataForFeedFeed(currentCategory));
-  }, [dispatch]);
+    dispatch(getDataForFeed(currentCategory));
+  }, [dispatch, currentCategory]);
 
   return (
     <>
       <Filter changeFilter={changeFilter} dispatch={dispatch}/>
       <FeedContainer feed={feed} filter={filter} />
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;

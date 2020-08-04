@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { filterDataForFeed } from '../middlewares';
 
-function Filter( { changeFilter, dispatch } ) {
+function Filter( {dispatch } ) {
 
 
   const [formValues, setFormValues] = useState({

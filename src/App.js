@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-} from "react-router-dom";
+} from 'react-router-dom';
 
-import { getDataForFeed } from './middlewares';
 
 import Character from './pages/Character';
+import Home from './pages/Home';
 
 function App() {
 
@@ -16,6 +16,9 @@ function App() {
     <div>
       <Router>
         <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
           <Route path="/characters/:id">
             <Character />
           </Route>

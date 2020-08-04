@@ -1,12 +1,9 @@
-const initialState = {
-  data: [],
-}
 
-const characterInfoReducer = (state = initialState, action) => {
+const characterInfoReducer = (state = {}, action) => {
 
-  switch (action.key) {
+  switch (action.type) {
     case 'SET_CHARACTER_DATA':
-      return { ...state, ...action.payload.data };
+      return { ...action.payload.data };
     default:
       return state
   }
