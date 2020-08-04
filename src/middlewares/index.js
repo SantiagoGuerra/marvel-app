@@ -2,7 +2,7 @@ import axios from 'axios';
 import md5 from 'md5';
 import { getFeed, setCharacterData } from '../actions';
 
-const URL = 'https://gateway.marvel.com:443/v1/public';
+const URL = 'https://gateway.marvel.com/v1/public';
 const PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY;
 const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
 const { TIMESTAMP } = process.env;
