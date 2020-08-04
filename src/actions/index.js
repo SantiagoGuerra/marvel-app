@@ -9,3 +9,10 @@ export const changeCurrentCategory = currentCategory => ({
     currentCategory,
   },
 });
+
+export const changeFilter = options => ({
+  type: 'CHANGE_FILTER',
+  payload: {
+    options,
+  },
+});

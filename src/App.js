@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       {console.log(state)}
-      <FeedContainer feed={state.feed} filter={state.filter}/>
+      <FeedContainer feed={state.feed} filter={state.filter} />
     </div>
   );
 }
