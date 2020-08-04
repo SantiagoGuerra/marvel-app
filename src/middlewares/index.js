@@ -1,6 +1,6 @@
 import axios from 'axios';
 import md5 from 'md5';
-import { getCharacters } from '../actions';
+import { getFeed } from '../actions';
 
 const URL = 'https://gateway.marvel.com:443/v1/public';
 const PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY;
@@ -19,14 +19,14 @@ const fetchData = async endpoints => {
   return result;
 };
 
-export const getCharactersData = () => async dispatch => {
-  await fetchData('/characters')
+export const getDataForFeed = category => async dispatch => {
+  await fetchData(`/${category}`)
     .then(result => {
       const { data } = result.data;
 
-      const characters = data.results;
+      const content = data.results;
 
-      dispatch(getCharacters(characters));
+      dispatch(getFeed(content));
     })
 
     .catch(error => {

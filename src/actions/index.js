@@ -1,6 +1,6 @@
-export const getCharacters = characters => ({
-  type: 'GET_CHARACTERS',
-  payload: { characters },
+export const getFeed = content => ({
+  type: 'GET_FEED',
+  payload: { content },
 });
 
 export const get = '';

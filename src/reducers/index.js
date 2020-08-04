@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import characters from './characters';
+import feedReducer from './feed';
 
 const rootReducers = combineReducers({
-  characters,
+  feed: feedReducer,
 });
 
 export default rootReducers;
