@@ -3,4 +3,9 @@ export const getFeed = content => ({
   payload: { content },
 });
 
-export const get = '';
+export const changeCurrentCategory = currentCategory => ({
+  type: 'CHANGE_CATEGORY',
+  payload: {
+    currentCategory,
+  },
+});
