@@ -34,4 +34,25 @@ export const getDataForFeed = category => async dispatch => {
     });
 };
 
-export const api = '';
+export const filterDataForFeed = options => async dispatch => {
+
+  const keys = Object.keys(options);
+ 
+  const query = keys.map(key => `${key}=${options[key]}`).join('&');
+
+  console.log(query)
+
+  await fetchData(`/characters?${query}`)
+    .then(result => {
+      const { data } = result.data;
+
+      const content = data.results;
+
+      dispatch(getFeed(content));
+    })
+
+    .catch(error => {
+      throw new Error(error);
+    });
+
+};

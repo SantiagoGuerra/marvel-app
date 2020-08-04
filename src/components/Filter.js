@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { filterDataForFeed } from '../middlewares';
 
 function Filter( { changeFilter, dispatch } ) {
 
 
-
   const [formValues, setFormValues] = useState({
-    orderby: 'name',
+    orderBy: 'name',
     limit: '5',
-    offset: '0'
+    offset: '0',
   });
 
 
@@ -26,7 +26,7 @@ function Filter( { changeFilter, dispatch } ) {
   const onSubmitForm = e => {
     e.preventDefault()
 
-    dispatch(changeFilter(formValues));
+    dispatch(filterDataForFeed(formValues));
   }
 
   const {orderby, limit, offset} = formValues;
@@ -36,11 +36,11 @@ function Filter( { changeFilter, dispatch } ) {
   return (
     <form onSubmit={onSubmitForm}>
       Order By:
-      <select name="orderby" id="orderby" onChange={onChangeValue} value={orderby}>
-        <option value="name">Name Asc</option>
-        <option value="modified"> Modified </option>
-        <option value="-name">Name Des</option>
-        <option value="-modified">Modified Des</option>
+      <select name="orderBy" id="orderBy" onChange={onChangeValue} value={orderby}>
+        <option value="name">Name A - Z</option>
+        <option value="modified">Older </option>
+        <option value="-name">Name Z - A</option>
+        <option value="-modified">Most Recent</option>
       </select>
 
       <input type="number" placeholder="limit" name="limit" onChange={onChangeValue} value={limit}/>

@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     dispatch(getDataForFeed(currentCategory));
-  }, [feed]);
+  }, [dispatch]);
 
   return (
 
