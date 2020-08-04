@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getDataForFeed } from './middlewares';
-import { changeCurrentCategory } from './actions';
+import FeedContainer from './components/FeedContainer';
 
 function App() {
   const state = useSelector(state => state);
-  const { currentCategory } = state.filter;
+  const currentCategory = useSelector(state => state.filter.currentCategory);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -14,17 +14,8 @@ function App() {
 
   return (
     <div>
-
-      <button onClick={() => {
-        dispatch(changeCurrentCategory('stories'));
-      }}
-      >
-        Change
-      </button>
-
-      {console.dir(state)}
-
-      Main Application
+      {console.log(state)}
+      <FeedContainer feed={state.feed} filter={state.filter}/>
     </div>
   );
 }
