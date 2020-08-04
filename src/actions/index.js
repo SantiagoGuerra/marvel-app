@@ -16,3 +16,10 @@ export const changeFilter = options => ({
     options,
   },
 });
+
+export const setCharacterData = data => ({
+  type: 'SET_CHARACTER_DATA',
+  payload: {
+    data,
+  },
+});
