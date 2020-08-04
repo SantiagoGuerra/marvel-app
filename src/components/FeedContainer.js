@@ -1,18 +1,29 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Link,
+} from "react-router-dom";
 import FeedItem from './FeedItem';
 
-const createFeedItems = feed => feed.map(({ id, name, thumbnail }) => (<FeedItem key={id} name={name} thumbnail={thumbnail} />));
+const createFeedItems = feed => feed.map(
+  ({ id, name, thumbnail }) => (
+  <Link to={`/characters/${id}`}>
+    <FeedItem key={id} name={name} thumbnail={thumbnail} /> 
+  </Link>
+));
 
 function FeedContainer({ feed, filter }) {
   return (
-    <div className="feed-container">
-      <h2>
-        {filter.currentCategory}
-      </h2>
+    <Router>
+      <div className="feed-container">
+        <h2>
+          {filter.currentCategory}
+        </h2>
 
-      {createFeedItems(feed)}
+        {createFeedItems(feed)}
 
-    </div>
+      </div>
+    </Router>
   );
 }
 
