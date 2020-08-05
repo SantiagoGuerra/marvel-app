@@ -16,7 +16,7 @@ function LayoutContainer({ children }) {
         ]}
       >
         <Filter gridArea="nav" />
-        <Box gridArea="main">
+        <Box gridArea="main" pad="large">
           {children}
         </Box>
       </Grid>

@@ -21,6 +21,7 @@ const ShowTabInformation = ({dataTab}) => {
         margin={{
           top: 'medium'
         }}
+        size="small"
       >
         Available: {available}
       </Heading>

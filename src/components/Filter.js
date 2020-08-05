@@ -8,6 +8,7 @@ import {
   Sidebar, Avatar, Nav, Button, Box, Select, FormField, RangeInput,
 } from 'grommet';
 import { filterDataForFeed } from '../middlewares';
+import marvelLogoIMG from '../assets/marvel.png'
 
 
 
@@ -54,7 +55,7 @@ function Filter() {
           <Box justify="center" direction="row" margin="small">
             <Link exact to="/">
               <Avatar
-                src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80"
+                src={marvelLogoIMG}
                 size="xlarge"
                 justify="center"
               />
