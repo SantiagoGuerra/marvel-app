@@ -3,6 +3,7 @@ import {
   Link,
 } from 'react-router-dom';
 import FeedItem from './FeedItem';
+import { Box, Heading } from 'grommet';
 
 const createFeedItems = feed => feed.map(
   ({ id, name, thumbnail }) => (
@@ -14,14 +15,24 @@ const createFeedItems = feed => feed.map(
 
 function FeedContainer({ feed, filter }) {
   return (
-    <div className="feed-container">
-      <h2>
+    <Box
+      direction="column"
+      align="center"
+    >
+      <Heading>
         {filter.currentCategory}
-      </h2>
+      </Heading>
+      <Box
+        direction="row"
+        wrap
+        gap="small"
+        justify="center"
+      >
+        {createFeedItems(feed)}
 
-      {createFeedItems(feed)}
+      </Box>
 
-    </div>
+    </Box>
   );
 }
 

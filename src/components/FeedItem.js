@@ -1,17 +1,74 @@
 import React from 'react';
+import styled from 'styled-components';
+import { Text, Box } from 'grommet';
+
+
+
+
+const StyledBox = styled(Box)`
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin-top: 20px;
+  overflow: hidden;
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.6530987394957983) 24%, rgba(255,255,255,0) 100%);
+  }
+
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    z-index: -200;
+    transition: .3s transform ease-in-out;
+  }
+
+  & .text {
+    color: #fff;
+    text-decoration: none;
+    bottom: 12px;
+    left: 12px;
+    position: absolute;
+    transition: .3s transform ease-in-out;
+    transform: translateY(200%)
+  }
+
+
+  &:hover .img {
+    transform: scale(1.5, 1.5)
+  }
+
+  &:hover .text {
+    transform: translateY(0)
+  }
+`
+
 
 function FeedItem({
   name,
   thumbnail,
 }) {
   return (
-    <div className="feed-item">
-      <img src={`${thumbnail.path}.${thumbnail.extension}`} />
-      <p>
-        {name}
-      </p>
-    </div>
-  );
+    <StyledBox
+      animation={["fadeIn", "slideDown"]}
+      class="feed-item"
+    >
+      <img src={`${thumbnail.path}.${thumbnail.extension}`} alt={name} class="img" />
+      <Text className="text">{name}</Text>
+    </StyledBox>
+  )
 }
 
 export default FeedItem;
