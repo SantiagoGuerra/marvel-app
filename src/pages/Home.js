@@ -17,7 +17,6 @@ function Home() {
 
   return (
     <>
-      <Filter changeFilter={changeFilter} dispatch={dispatch} />
       <FeedContainer feed={feed} filter={filter} />
     </>
   );

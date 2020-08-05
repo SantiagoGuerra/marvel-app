@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import {
   Link,
 } from 'react-router-dom';
-
+import styled from 'styled-components'
 import {
-  Sidebar, Avatar, Nav, Button, Box, Header, Select, FormField, TextInput, RangeInput,
+  Sidebar, Avatar, Nav, Button, Box, Select, FormField, RangeInput,
 } from 'grommet';
-import {
-  Help, Projects, Clock, Home,
-} from 'grommet-icons';
 import { filterDataForFeed } from '../middlewares';
 
-function Filter({ dispatch }) {
+
+
+const StyledBox = styled.div`
+  position: fixed;
+`
+
+function Filter() {
+
+
+  const dispatch = useDispatch()
+
   const [formValues, setFormValues] = useState({
     orderBy: 'name',
     limit: '5',
@@ -36,7 +44,7 @@ function Filter({ dispatch }) {
   const { orderby, limit, offset } = formValues;
 
   return (
-    <div>
+    <StyledBox>
       <Sidebar
         background="brand"
         width="300px"
@@ -99,8 +107,10 @@ function Filter({ dispatch }) {
           </form>
         </Nav>
       </Sidebar>
-    </div>
+    </StyledBox>
   );
+
+
 }
 
 export default Filter;

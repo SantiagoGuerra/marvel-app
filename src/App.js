@@ -8,6 +8,7 @@ import { Grommet } from 'grommet';
 
 import Character from './pages/Character';
 import Home from './pages/Home';
+import LayoutContainer from './layout/LayoutContainer';
 
 function App() {
   return (
@@ -15,12 +16,15 @@ function App() {
     <Grommet plain>
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/characters/:id">
-            <Character />
-          </Route>
+
+          <LayoutContainer>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/characters/:id">
+              <Character />
+            </Route>
+          </LayoutContainer>
         </Switch>
       </Router>
 
