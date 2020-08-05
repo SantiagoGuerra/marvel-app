@@ -7,11 +7,12 @@ function CharacterBasicInfo({ data }) {
     name,
     thumbnail,
     description
-  } = data
+  } = data;
+
 
   return (
     <div>
-      <img src={`${ thumbnail.path }.${ thumbnail.extension }`} alt={ name }/>
+      <img src={`${ thumbnail?.path }.${ thumbnail?.extension }`} alt={ name }/>
       <h2>
         { name }
       </h2>
