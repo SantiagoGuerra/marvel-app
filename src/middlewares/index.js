@@ -35,12 +35,11 @@ export const getDataForFeed = category => async dispatch => {
 };
 
 export const filterDataForFeed = options => async dispatch => {
-
   const keys = Object.keys(options);
- 
+
   const query = keys.map(key => `${key}=${options[key]}`).join('&');
 
-  console.log(query)
+  console.log(query);
 
   await fetchData(`/characters?${query}`)
     .then(result => {
@@ -54,11 +53,9 @@ export const filterDataForFeed = options => async dispatch => {
     .catch(error => {
       throw new Error(error);
     });
-
 };
 
 export const getCharacterInfo = id => async dispatch => {
-
   await fetchData(`/characters/${id}`)
     .then(result => {
       const { data } = result.data;
@@ -71,5 +68,4 @@ export const getCharacterInfo = id => async dispatch => {
     .catch(error => {
       throw new Error(error);
     });
-
-} 
+};

@@ -4,16 +4,15 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-
+import { Grommet } from 'grommet';
 
 import Character from './pages/Character';
 import Home from './pages/Home';
 
 function App() {
-
   return (
 
-    <div>
+    <Grommet plain>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -25,7 +24,7 @@ function App() {
         </Switch>
       </Router>
 
-    </div>
+    </Grommet>
   );
 }
 
