@@ -40,5 +40,4 @@ describe('Test <CharacterDescription/> Component', () => {
 
     expect(Box.exists()).toBe(true);
   });
-
 });

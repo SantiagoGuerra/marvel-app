@@ -3,6 +3,8 @@ import {
   Link,
 } from 'react-router-dom';
 import { Box, Heading } from 'grommet';
+import PropTypes from 'prop-types';
+
 import FeedItem from './FeedItem';
 
 const createFeedItems = feed => feed.map(
@@ -39,5 +41,10 @@ function FeedContainer({ feed, filter }) {
     </Box>
   );
 }
+
+FeedContainer.propTypes = {
+  feed: PropTypes.oneOfType([PropTypes.array]).isRequired,
+  filter: PropTypes.oneOfType([PropTypes.object]).isRequired,
+};
 
 export default FeedContainer;
