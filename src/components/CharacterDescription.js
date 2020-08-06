@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Box, Image, Heading, Text,
 } from 'grommet';
+import PropTypes from 'prop-types';
 
 function CharacterDescription({ thumbnail, name, description }) {
   return (
@@ -20,5 +21,11 @@ function CharacterDescription({ thumbnail, name, description }) {
     </>
   );
 }
+
+CharacterDescription.propTypes = {
+  thumbnail: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 export default CharacterDescription;
