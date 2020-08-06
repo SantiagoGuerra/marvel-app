@@ -34,4 +34,11 @@ describe('Test <CharacterDescription/> Component', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+
+  test('should have a component called Box', () => {
+    const Box = wrapper.find('Box');
+
+    expect(Box.exists()).toBe(true);
+  });
+
 });
