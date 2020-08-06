@@ -58,11 +58,11 @@ describe('Test <CharacterBasicInfo /> Component', () => {
   });
 
 
-  test('should have a component called Box', () => {
-    const Box = wrapper.find('Box');
+  test('should have a component called CharacterDescription', () => {
+    const CharacterDescription = wrapper.find('CharacterDescription');
 
 
-    expect(Box.exists()).toBe(true);
+    expect(CharacterDescription.exists()).toBe(true);
   });
   
 });
