@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {
   Box,
 } from 'grommet';
+import PropTypes from 'prop-types';
 import CharacterDescription from './CharacterDescription';
 import Tabs from './Tabs';
 
@@ -34,5 +35,9 @@ function CharacterBasicInfo({ data }) {
     </>
   );
 }
+
+CharacterBasicInfo.propTypes = {
+  data: PropTypes.oneOfType([PropTypes.object]).isRequired,
+};
 
 export default CharacterBasicInfo;
