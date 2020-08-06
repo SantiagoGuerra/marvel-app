@@ -39,8 +39,6 @@ export const filterDataForFeed = options => async dispatch => {
 
   const query = keys.map(key => `${key}=${options[key]}`).join('&');
 
-  console.log(query);
-
   await fetchData(`/characters?${query}`)
     .then(result => {
       const { data } = result.data;

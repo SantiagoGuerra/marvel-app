@@ -9,7 +9,7 @@ import { Grommet } from 'grommet';
 import Character from './pages/Character';
 import Home from './pages/Home';
 import LayoutContainer from './layout/LayoutContainer';
-import grommet from './grommet-theme.json'
+import grommet from './grommet-theme.json';
 
 function App() {
   return (

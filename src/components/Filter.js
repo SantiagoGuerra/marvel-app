@@ -3,23 +3,19 @@ import { useDispatch } from 'react-redux';
 import {
   Link,
 } from 'react-router-dom';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import {
   Sidebar, Avatar, Nav, Button, Box, Select, FormField, RangeInput,
 } from 'grommet';
 import { filterDataForFeed } from '../middlewares';
-import marvelLogoIMG from '../assets/marvel.png'
-
-
+import marvelLogoIMG from '../assets/marvel.png';
 
 const StyledBox = styled.div`
   position: fixed;
-`
+`;
 
 function Filter() {
-
-
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const [formValues, setFormValues] = useState({
     orderBy: 'name',
@@ -110,8 +106,6 @@ function Filter() {
       </Sidebar>
     </StyledBox>
   );
-
-
 }
 
 export default Filter;

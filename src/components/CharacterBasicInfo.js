@@ -1,29 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { Box, List, Heading, Text, Image, Tabs, Tab, Meter} from "grommet";
+import React, { useEffect, useState } from 'react';
+import {
+  Box, List, Heading, Text, Image, Tabs, Tab, Meter,
+} from 'grommet';
 
-
-
-const ShowTabInformation = ({dataTab}) => {
-
-
+const ShowTabInformation = ({ dataTab }) => {
   useEffect(() => {
-  }, [])
-
-
-  const available = dataTab?.available
+  }, []);
 
   return (
     <>
 
-   
-
       <Heading
         margin={{
-          top: 'medium'
+          top: 'medium',
         }}
         size="small"
       >
-        Available: {available}
+        {`Available: ${dataTab?.available}`}
       </Heading>
       <List
         primaryKey="name"
@@ -31,25 +24,20 @@ const ShowTabInformation = ({dataTab}) => {
         data={dataTab?.items}
       />
 
-
     </>
-  )
-}
-
+  );
+};
 
 function CharacterBasicInfo({ data }) {
-
-
-  const [dat, setData] = useState({})
+  const [dat, setData] = useState({});
 
   useEffect(() => {
-    setData(data)
-  }, [data])
+    setData(data);
+  }, [data]);
 
-
-  const {thumbnail, name, comics, events, series, stories, description} = dat
-
-  console.log(comics);
+  const {
+    thumbnail, name, comics, events, series, stories, description,
+  } = dat;
 
   return (
     <>
@@ -69,22 +57,22 @@ function CharacterBasicInfo({ data }) {
       <Tabs
         alignControls="start"
         margin={{
-          top: 'xlarge'
+          top: 'xlarge',
         }}
       >
         <Tab title="Comics">
-          <ShowTabInformation dataTab={comics}/>
+          <ShowTabInformation dataTab={comics} />
         </Tab>
         <Tab title="Events">
-        <ShowTabInformation dataTab={events}/>
+          <ShowTabInformation dataTab={events} />
 
         </Tab>
         <Tab title="Series">
-        <ShowTabInformation dataTab={series}/>
+          <ShowTabInformation dataTab={series} />
 
         </Tab>
         <Tab title="Stories">
-        <ShowTabInformation dataTab={stories}/>
+          <ShowTabInformation dataTab={stories} />
 
         </Tab>
       </Tabs>

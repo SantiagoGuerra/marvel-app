@@ -2,9 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Text, Box } from 'grommet';
 
-
-
-
 const StyledBox = styled(Box)`
   width: 200px;
   height: 200px;
@@ -53,8 +50,7 @@ const StyledBox = styled(Box)`
   &:hover .text {
     transform: translateY(0)
   }
-`
-
+`;
 
 function FeedItem({
   name,
@@ -62,13 +58,13 @@ function FeedItem({
 }) {
   return (
     <StyledBox
-      animation={["fadeIn", "slideDown"]}
+      animation={['fadeIn', 'slideDown']}
       class="feed-item"
     >
-      <img src={`${thumbnail.path}.${thumbnail.extension}`} alt={name} class="img" />
+      <img src={`${thumbnail.path}.${thumbnail.extension}`} alt={name} className="img" />
       <Text className="text">{name}</Text>
     </StyledBox>
-  )
+  );
 }
 
 export default FeedItem;

@@ -17,7 +17,6 @@ function Character() {
   return (
     <div>
       <CharacterBasicInfo data={characterInfo} />
-      {console.log(characterInfo)}
     </div>
   );
 }

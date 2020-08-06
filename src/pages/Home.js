@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import FeedContainer from '../components/FeedContainer';
-import Filter from '../components/Filter';
-import { changeFilter } from '../actions';
 import { getDataForFeed } from '../middlewares';
 
 function Home() {

@@ -2,8 +2,8 @@ import React from 'react';
 import {
   Link,
 } from 'react-router-dom';
-import FeedItem from './FeedItem';
 import { Box, Heading } from 'grommet';
+import FeedItem from './FeedItem';
 
 const createFeedItems = feed => feed.map(
   ({ id, name, thumbnail }) => (
@@ -19,7 +19,11 @@ function FeedContainer({ feed, filter }) {
       direction="column"
       align="center"
     >
-      <Heading>
+      <Heading
+        style={{
+          textTransform: 'capitalize',
+        }}
+      >
         {filter.currentCategory}
       </Heading>
       <Box
