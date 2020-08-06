@@ -1,32 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Box, List, Heading, Text, Image, Tabs, Tab, Meter,
+  Box,
 } from 'grommet';
-
-const ShowTabInformation = ({ dataTab }) => {
-  useEffect(() => {
-  }, []);
-
-  return (
-    <>
-
-      <Heading
-        margin={{
-          top: 'medium',
-        }}
-        size="small"
-      >
-        {`Available: ${dataTab?.available}`}
-      </Heading>
-      <List
-        primaryKey="name"
-        secondaryKey="percent"
-        data={dataTab?.items}
-      />
-
-    </>
-  );
-};
+import CharacterDescription from './CharacterDescription';
+import Tabs from './Tabs';
 
 function CharacterBasicInfo({ data }) {
   const [dat, setData] = useState({});
@@ -41,41 +18,19 @@ function CharacterBasicInfo({ data }) {
 
   return (
     <>
-      <Box direction="column" wrap gap="medium">
-        <Box height="medium">
-          <Image
-            fit="cover"
-            src={`${thumbnail?.path}.${thumbnail?.extension}`}
-          />
-        </Box>
-        <Box direction="column" gap="small" basis="80%">
-          <Heading>{name}</Heading>
+      <Box direction="column" wrap gap="medium" />
 
-          <Text>{description}</Text>
-        </Box>
-      </Box>
+      <CharacterDescription
+        thumbnail={thumbnail}
+        name={name}
+        description={description}
+      />
       <Tabs
-        alignControls="start"
-        margin={{
-          top: 'xlarge',
-        }}
-      >
-        <Tab title="Comics">
-          <ShowTabInformation dataTab={comics} />
-        </Tab>
-        <Tab title="Events">
-          <ShowTabInformation dataTab={events} />
-
-        </Tab>
-        <Tab title="Series">
-          <ShowTabInformation dataTab={series} />
-
-        </Tab>
-        <Tab title="Stories">
-          <ShowTabInformation dataTab={stories} />
-
-        </Tab>
-      </Tabs>
+        comics={comics}
+        events={events}
+        series={series}
+        stories={stories}
+      />
     </>
   );
 }
