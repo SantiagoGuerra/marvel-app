@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Heading, List } from 'grommet';
+import PropTypes from 'prop-types';
 
 const ShowTabInformation = ({ dataTab }) => {
   useEffect(() => {
@@ -24,6 +25,14 @@ const ShowTabInformation = ({ dataTab }) => {
 
     </>
   );
+};
+
+ShowTabInformation.defaultProps = {
+  dataTab: {},
+};
+
+ShowTabInformation.propTypes = {
+  dataTab: PropTypes.oneOfType(PropTypes.object),
 };
 
 export default ShowTabInformation;
