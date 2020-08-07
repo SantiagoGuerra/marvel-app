@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <CharacterBasicInfo /> Component should have data as parameter 1`] = `
+<Fragment>
+  <Box
+    direction="column"
+    gap="medium"
+    wrap={true}
+  />
+  <CharacterDescription
+    description=""
+    name=""
+    thumbnail={
+      Object {
+        "extension": "",
+        "path": "",
+      }
+    }
+  />
+  <Tabs
+    comics={Object {}}
+    events={Object {}}
+    series={Object {}}
+    stories={Object {}}
+  />
+</Fragment>
+`;
+
+exports[`Test <CharacterBasicInfo /> Component should render the component correctly 1`] = `
+<Fragment>
+  <Box
+    direction="column"
+    gap="medium"
+    wrap={true}
+  />
+  <CharacterDescription
+    description=""
+    name=""
+    thumbnail={
+      Object {
+        "extension": "",
+        "path": "",
+      }
+    }
+  />
+  <Tabs
+    comics={Object {}}
+    events={Object {}}
+    series={Object {}}
+    stories={Object {}}
+  />
+</Fragment>
+`;
