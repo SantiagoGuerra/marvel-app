@@ -1,7 +1,6 @@
 const React = require('react');
 const { shallow } = require('enzyme');
 const { default: CharacterBasicInfo } = require('../../components/CharacterBasicInfo');
-const { default: CharacterDescription } = require('../../components/CharacterDescription');
 
 describe('Test <CharacterBasicInfo /> Component', () => {
   const thumbnail = {

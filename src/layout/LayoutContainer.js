@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Box } from 'grommet';
+import PropTypes from 'prop-types';
 import Filter from '../components/Filter';
 
 function LayoutContainer({ children }) {
@@ -22,5 +23,13 @@ function LayoutContainer({ children }) {
     </>
   );
 }
+
+LayoutContainer.defaultProps = {
+  children: {},
+};
+
+LayoutContainer.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.object]),
+};
 
 export default LayoutContainer;
