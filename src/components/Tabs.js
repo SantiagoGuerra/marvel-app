@@ -5,6 +5,7 @@ import {
   Tab,
 
 } from 'grommet';
+import PropTypes from 'prop-types';
 import ShowTabInformation from './ShowTabInformation';
 
 function Tabs({
@@ -35,5 +36,19 @@ function Tabs({
     </TabsContainer>
   );
 }
+
+Tabs.defaultProps = {
+  comics: {},
+  series: {},
+  stories: {},
+  events: {},
+};
+
+Tabs.propTypes = {
+  comics: PropTypes.oneOfType(PropTypes.object),
+  series: PropTypes.oneOfType(PropTypes.object),
+  stories: PropTypes.oneOfType(PropTypes.object),
+  events: PropTypes.oneOfType(PropTypes.object),
+};
 
 export default Tabs;
