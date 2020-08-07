@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Text, Box } from 'grommet';
+import PropTypes from 'prop-types';
 
 const StyledBox = styled(Box)`
   width: 200px;
@@ -66,5 +67,18 @@ function FeedItem({
     </StyledBox>
   );
 }
+
+FeedItem.defaultProps = {
+  name: '',
+  thumbnail: {
+    path: '',
+    extension: '',
+  },
+};
+
+FeedItem.propTypes = {
+  name: PropTypes.string,
+  thumbnail: PropTypes.oneOfType([PropTypes.object]),
+};
 
 export default FeedItem;
