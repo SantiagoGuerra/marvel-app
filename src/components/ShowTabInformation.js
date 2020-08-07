@@ -32,7 +32,7 @@ ShowTabInformation.defaultProps = {
 };
 
 ShowTabInformation.propTypes = {
-  dataTab: PropTypes.oneOfType(PropTypes.object),
+  dataTab: PropTypes.oneOfType([PropTypes.object]),
 };
 
 export default ShowTabInformation;

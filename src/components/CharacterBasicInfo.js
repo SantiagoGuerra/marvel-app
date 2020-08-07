@@ -41,7 +41,7 @@ CharacterBasicInfo.defaultProps = {
 };
 
 CharacterBasicInfo.propTypes = {
-  data: PropTypes.oneOfType([PropTypes.object]),
+  data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 };
 
 export default CharacterBasicInfo;

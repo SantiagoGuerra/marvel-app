@@ -45,10 +45,10 @@ Tabs.defaultProps = {
 };
 
 Tabs.propTypes = {
-  comics: PropTypes.oneOfType(PropTypes.object),
-  series: PropTypes.oneOfType(PropTypes.object),
-  stories: PropTypes.oneOfType(PropTypes.object),
-  events: PropTypes.oneOfType(PropTypes.object),
+  comics: PropTypes.oneOfType([PropTypes.object]),
+  series: PropTypes.oneOfType([PropTypes.object]),
+  stories: PropTypes.oneOfType([PropTypes.object]),
+  events: PropTypes.oneOfType([PropTypes.object]),
 };
 
 export default Tabs;
