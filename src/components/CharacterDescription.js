@@ -22,10 +22,19 @@ function CharacterDescription({ thumbnail, name, description }) {
   );
 }
 
+CharacterDescription.defaultProps = {
+  thumbnail: {
+    path: '',
+    extension: '',
+  },
+  name: '',
+  description: '',
+};
+
 CharacterDescription.propTypes = {
-  thumbnail: PropTypes.oneOfType([PropTypes.object]).isRequired,
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  thumbnail: PropTypes.oneOfType([PropTypes.object]),
+  name: PropTypes.string,
+  description: PropTypes.string,
 };
 
 export default CharacterDescription;

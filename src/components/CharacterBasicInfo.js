@@ -36,8 +36,12 @@ function CharacterBasicInfo({ data }) {
   );
 }
 
+CharacterBasicInfo.defaultProps = {
+  data: {},
+};
+
 CharacterBasicInfo.propTypes = {
-  data: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  data: PropTypes.oneOfType([PropTypes.object]),
 };
 
 export default CharacterBasicInfo;

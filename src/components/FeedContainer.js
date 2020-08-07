@@ -42,9 +42,14 @@ function FeedContainer({ feed, filter }) {
   );
 }
 
+FeedContainer.defaultProps = {
+  feed: [],
+  filter: {},
+};
+
 FeedContainer.propTypes = {
-  feed: PropTypes.oneOfType([PropTypes.array]).isRequired,
-  filter: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  feed: PropTypes.oneOfType([PropTypes.array]),
+  filter: PropTypes.oneOfType([PropTypes.object]),
 };
 
 export default FeedContainer;

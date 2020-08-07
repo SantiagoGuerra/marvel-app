@@ -1,6 +1,7 @@
 const React = require('react');
 const { shallow } = require('enzyme');
 const { default: CharacterBasicInfo } = require('../../components/CharacterBasicInfo');
+const { default: CharacterDescription } = require('../../components/CharacterDescription');
 
 describe('Test <CharacterBasicInfo /> Component', () => {
   const thumbnail = {
@@ -37,7 +38,6 @@ describe('Test <CharacterBasicInfo /> Component', () => {
   };
 
   const wrapper = shallow(<CharacterBasicInfo data={data} />);
-
   test('should render the component correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
@@ -55,7 +55,6 @@ describe('Test <CharacterBasicInfo /> Component', () => {
 
   test('should have a component called CharacterDescription', () => {
     const CharacterDescription = wrapper.find('CharacterDescription');
-
     expect(CharacterDescription.exists()).toBe(true);
   });
 
