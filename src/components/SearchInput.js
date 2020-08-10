@@ -1,6 +1,9 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { TextInput } from 'grommet';
 import styled from 'styled-components';
+
+import { filterDataForFeed } from '../middlewares/index';
 
 const StyledTextInput = styled(TextInput)`
   max-width: 300px;
@@ -13,12 +16,30 @@ const StyledTextInput = styled(TextInput)`
 
 function SearchInput() {
   const [value, setValue] = React.useState('');
+
+  const dispatch = useDispatch();
+
+  const onSubmitForm = e => {
+    e.preventDefault();
+
+    dispatch(filterDataForFeed({
+      nameStartsWith: value,
+      limit: 12,
+    }));
+
+    setValue('');
+  };
+
   return (
-    <StyledTextInput
-      placeholder="Search your favourite hero!"
-      value={value}
-      onChange={event => setValue(event.target.value)}
-    />
+    <form
+      onSubmit={onSubmitForm}
+    >
+      <StyledTextInput
+        placeholder="Search your favourite hero!"
+        value={value}
+        onChange={({ target }) => setValue(target.value)}
+      />
+    </form>
   );
 }
 
