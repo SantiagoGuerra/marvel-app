@@ -2,6 +2,8 @@ import React from 'react';
 import { Header as GrommetHeader, Image, Box } from 'grommet';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+
+import SearchInput from './SearchInput';
 import MarvelLogo from '../assets/marvel-logo.png';
 
 const Header = () => {
@@ -23,7 +25,7 @@ const Header = () => {
       pad="small"
     >
 
-      <StyledHeaderContainer>
+      <StyledHeaderContainer direction="row">
 
         <Link exact to="/" width="auto">
           <Image
@@ -32,6 +34,8 @@ const Header = () => {
             src={MarvelLogo}
           />
         </Link>
+
+        <SearchInput />
 
       </StyledHeaderContainer>
     </GrommetHeader>
