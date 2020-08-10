@@ -2,6 +2,7 @@ import React from 'react';
 import { Box } from 'grommet';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Header from '../components/Header';
 
 function LayoutContainer({ children }) {
   const StyledBoxContainer = styled(Box)`
@@ -15,7 +16,7 @@ function LayoutContainer({ children }) {
   return (
     <>
 
-      {/* <Filter gridArea="nav" /> */}
+      <Header />
       <StyledBoxContainer gridArea="main" pad={0}>
         {children}
       </StyledBoxContainer>
