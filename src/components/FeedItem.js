@@ -4,7 +4,7 @@ import { Text, Box } from 'grommet';
 import PropTypes from 'prop-types';
 
 const StyledBox = styled(Box)`
-  width: 200px;
+  width: calc(100vw - 32px);
   height: 200px;
   position: relative;
   margin-top: 20px;
@@ -50,6 +50,10 @@ const StyledBox = styled(Box)`
 
   &:hover .text {
     transform: translateY(0)
+  }
+
+  @media screen and (min-width: 375px) {
+    width: 200px;
   }
 `;
 

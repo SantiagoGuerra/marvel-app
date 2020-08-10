@@ -20,6 +20,7 @@ function FeedContainer({ feed, filter }) {
     <Box
       direction="column"
       align="center"
+      pad={0}
     >
       <Heading
         style={{

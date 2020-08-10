@@ -1,25 +1,24 @@
 import React from 'react';
-import { Grid, Box } from 'grommet';
+import { Box } from 'grommet';
 import PropTypes from 'prop-types';
-import Filter from '../components/Filter';
+import styled from 'styled-components';
 
 function LayoutContainer({ children }) {
+  const StyledBoxContainer = styled(Box)`
+  
+    margin: auto;
+    max-width: 1120px;
+    margin-bottom: 60px;
+
+  `;
+
   return (
     <>
-      <Grid
-        rows={['xxsmall', 'large']}
-        columns={['300px', 'calc(100% - 316px)']}
-        gap="small"
-        areas={[
-          { name: 'nav', start: [0, 1], end: [0, 1] },
-          { name: 'main', start: [1, 1], end: [1, 1] },
-        ]}
-      >
-        <Filter gridArea="nav" />
-        <Box gridArea="main" pad="large">
-          {children}
-        </Box>
-      </Grid>
+
+      {/* <Filter gridArea="nav" /> */}
+      <StyledBoxContainer gridArea="main" pad={0}>
+        {children}
+      </StyledBoxContainer>
     </>
   );
 }
