@@ -22,5 +22,6 @@
   "ignorePatterns": [
     "dist/",
     "build/"
-  ]
+  ],
+  "parser": "babel-eslint"
 }
