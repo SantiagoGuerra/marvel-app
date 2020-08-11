@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.feed-container {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+
+.feed-item {
+  max-width: 250px;
+
+  & img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
