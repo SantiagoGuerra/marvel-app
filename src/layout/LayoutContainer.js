@@ -20,6 +20,7 @@ function LayoutContainer({ children }) {
       <StyledBoxContainer gridArea="main" pad={0}>
         {children}
       </StyledBoxContainer>
+
     </>
   );
 }

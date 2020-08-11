@@ -2,10 +2,11 @@ import React from 'react';
 import {
   Link,
 } from 'react-router-dom';
-import { Box, Heading } from 'grommet';
+import { Box } from 'grommet';
 import PropTypes from 'prop-types';
 
 import FeedItem from './FeedItem';
+import Paginate from './Pagination';
 
 const createFeedItems = feed => feed.map(
   ({ id, name, thumbnail }) => (
@@ -15,42 +16,40 @@ const createFeedItems = feed => feed.map(
   ),
 );
 
-function FeedContainer({ feed, filter }) {
+function FeedContainer({ feed }) {
   return (
-    <Box
-      direction="column"
-      align="center"
-      pad={0}
-    >
-      <Heading
-        style={{
-          textTransform: 'capitalize',
-        }}
-      >
-        {filter.currentCategory}
-      </Heading>
+    <>
       <Box
-        direction="row"
-        wrap
-        gap="small"
-        justify="center"
+        direction="column"
+        align="center"
+        pad={0}
+
       >
-        {createFeedItems(feed)}
 
+        <Box
+          direction="row"
+          wrap
+          gap="small"
+          justify="center"
+          margin={{
+            vertical: '48px',
+          }}
+        >
+          {createFeedItems(feed)}
+
+        </Box>
+        <Paginate />
       </Box>
-
-    </Box>
+    </>
   );
 }
 
 FeedContainer.defaultProps = {
   feed: [],
-  filter: {},
 };
 
 FeedContainer.propTypes = {
   feed: PropTypes.oneOfType([PropTypes.array]),
-  filter: PropTypes.oneOfType([PropTypes.object]),
 };
 
 export default FeedContainer;

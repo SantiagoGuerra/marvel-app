@@ -64,7 +64,7 @@ function FeedItem({
   return (
     <StyledBox
       animation={['fadeIn', 'slideDown']}
-      class="feed-item"
+      className="feed-item"
     >
       <img src={`${thumbnail.path}.${thumbnail.extension}`} alt={name} className="img" />
       <Text className="text">{name}</Text>
