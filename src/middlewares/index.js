@@ -5,14 +5,14 @@ import { getFeed, setCharacterData } from '../actions';
 const URL = 'https://gateway.marvel.com/v1/public';
 const PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY;
 const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
-const { TIMESTAMP } = process.env;
+const REACT_APP_TIMESTAMP = 10;
 
 const fetchData = async endpoints => {
   const result = await axios.get(`${URL}${endpoints}`, {
     params: {
       apikey: PUBLIC_KEY,
-      ts: TIMESTAMP,
-      hash: md5(`${TIMESTAMP}${PRIVATE_KEY}${PUBLIC_KEY}`),
+      ts: REACT_APP_TIMESTAMP,
+      hash: md5(`${REACT_APP_TIMESTAMP}${PRIVATE_KEY}${PUBLIC_KEY}`),
     },
   });
 
