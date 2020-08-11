@@ -15,12 +15,12 @@ const ShowTabInformation = ({ dataTab }) => {
         }}
         size="small"
       >
-        {`Available: ${dataTab?.available}`}
+        {`Available: ${dataTab.available || ''}`}
       </Heading>
       <List
         primaryKey="name"
         secondaryKey="percent"
-        data={dataTab?.items}
+        data={dataTab.items || []}
       />
 
     </>

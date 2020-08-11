@@ -10,7 +10,7 @@ function CharacterDescription({ thumbnail, name, description }) {
       <Box height="medium">
         <Image
           fit="cover"
-          src={`${thumbnail?.path}.${thumbnail?.extension}`}
+          src={`${thumbnail.path || ''}.${thumbnail.extension || ''}`}
         />
       </Box>
       <Box direction="column" gap="small" basis="80%">
