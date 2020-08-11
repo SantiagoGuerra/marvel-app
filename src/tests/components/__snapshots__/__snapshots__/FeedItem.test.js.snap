@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <FeedItem /> Component should have data as parameter 1`] = `
+<Styled(Box)
+  animation={
+    Array [
+      "fadeIn",
+      "slideDown",
+    ]
+  }
+  class="feed-item"
+>
+  <img
+    alt="Hulk"
+    className="img"
+    src="https://....png"
+  />
+  <Text
+    className="text"
+    level={1}
+  >
+    Hulk
+  </Text>
+</Styled(Box)>
+`;
+
+exports[`Test <FeedItem /> Component should render the component correctly 1`] = `
+<Styled(Box)
+  animation={
+    Array [
+      "fadeIn",
+      "slideDown",
+    ]
+  }
+  class="feed-item"
+>
+  <img
+    alt="Hulk"
+    className="img"
+    src="https://....png"
+  />
+  <Text
+    className="text"
+    level={1}
+  >
+    Hulk
+  </Text>
+</Styled(Box)>
+`;

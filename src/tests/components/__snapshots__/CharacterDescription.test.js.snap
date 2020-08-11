@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <CharacterDescription/> Component should have [thumbnail, name and description] as parameters 1`] = `
+<Fragment>
+  <Box
+    height="medium"
+  >
+    <Image
+      fit="cover"
+      src="https://cloudimg.io/s/XSdTer23dwedffwqa.png"
+    />
+  </Box>
+  <Box
+    basis="80%"
+    direction="column"
+    gap="small"
+  >
+    <Heading
+      level={1}
+      responsive={true}
+    >
+      Hulk
+    </Heading>
+    <Text
+      level={1}
+    >
+      lorem ipsum
+    </Text>
+  </Box>
+</Fragment>
+`;
+
+exports[`Test <CharacterDescription/> Component should render the component correctly 1`] = `
+<Fragment>
+  <Box
+    height="medium"
+  >
+    <Image
+      fit="cover"
+      src="https://cloudimg.io/s/XSdTer23dwedffwqa.png"
+    />
+  </Box>
+  <Box
+    basis="80%"
+    direction="column"
+    gap="small"
+  >
+    <Heading
+      level={1}
+      responsive={true}
+    >
+      Hulk
+    </Heading>
+    <Text
+      level={1}
+    >
+      lorem ipsum
+    </Text>
+  </Box>
+</Fragment>
+`;
