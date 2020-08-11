@@ -17,7 +17,7 @@ function LayoutContainer({ children }) {
     <>
 
       <Header />
-      <StyledBoxContainer gridArea="main" pad={0}>
+      <StyledBoxContainer gridArea="main">
         {children}
       </StyledBoxContainer>
 
@@ -30,7 +30,7 @@ LayoutContainer.defaultProps = {
 };
 
 LayoutContainer.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.object]),
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.any]),
 };
 
 export default LayoutContainer;
