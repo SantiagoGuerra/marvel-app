@@ -1,4 +1,5 @@
 {
+  "parser": "@babel/eslint-parser",
   "env": {
     "browser": true,
     "es6": true,
@@ -12,7 +13,7 @@
     "sourceType": "module"
   },
   "extends": ["airbnb", "plugin:react/recommended"],
-  "plugins": ["react"],
+  "plugins": ["react", "babel", "@babel"],
   "rules": {
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "import/no-unresolved": "off",
@@ -22,6 +23,5 @@
   "ignorePatterns": [
     "dist/",
     "build/"
-  ],
-  "parser": "babel-eslint"
+  ]
 }
