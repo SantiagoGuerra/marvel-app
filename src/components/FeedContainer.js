@@ -22,8 +22,6 @@ function FeedContainer({ feed }) {
       <Box
         direction="column"
         align="center"
-        pad={0}
-
       >
 
         <Box
